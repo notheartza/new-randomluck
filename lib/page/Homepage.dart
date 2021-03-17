@@ -9,13 +9,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() => {
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,10 +19,23 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Card(
-             
-              child: Padding(padding: EdgeInsets.all(20),
-              child: Text("test"),))
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.5,
+              child: Card(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(15, 25, 15, 10),
+                      child: Text("Menu"),
+                    ),
+                    Divider(
+                      height: 20,
+                      thickness: 3,
+                    )
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
