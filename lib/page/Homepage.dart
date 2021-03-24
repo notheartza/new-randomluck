@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_randomluck/page/NumberRandomPage.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -39,8 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           Text("Select Random"),
                           ElevatedButton(
                               onPressed: (() {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(content: Text("Random1")));
+                                /*ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(content: Text("Random1")));*/
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => NumberRandomPage()));
                               }),
                               child: Text("Random1"))
                         ],
