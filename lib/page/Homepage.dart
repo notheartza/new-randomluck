@@ -31,6 +31,20 @@ class _MyHomePageState extends State<MyHomePage> {
                     Divider(
                       height: 20,
                       thickness: 3,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(15, 10, 15, 25),
+                      child: Column(
+                        children: [
+                          Text("Select Random"),
+                          ElevatedButton(
+                              onPressed: (() {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(content: Text("Random1")));
+                              }),
+                              child: Text("Random1"))
+                        ],
+                      ),
                     )
                   ],
                 ),
